@@ -1,0 +1,81 @@
+#info-data{
+    margin-top: 10px;
+    border: 2px solid grey;
+    padding: 20px;
+    border-radius: 30px;
+}
+#profile-background img{
+    margin: -1px;
+}
+.puesto{
+    margin-bottom: 30px;
+}
+.nombre,.puesto, .SobreMi{
+    display: flex;
+}
+#pencil{
+    margin-left:60px;
+    cursor: pointer;
+    display: flex;
+}
+.card{
+    border:none;
+}
+
+.nacionalidad p{
+    display: inline;
+}
+.nacionalidad{
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+.nacionalidad a{
+    text-decoration: none;
+}
+#data{
+    margin-top: 10px;
+    border: 2px solid grey;
+    padding: 20px;
+    border-radius: 30px;
+}
+#data{
+    margin-top: 30px;
+}
+.posicion{
+    margin-left:60px;
+    margin-top: -130px;    
+}
+.posicion2{
+    margin-left: 90%;
+    margin-top: -40px;
+}
+.contenedor-color{
+    background: white;
+    width: 28px;
+    height: 28px;
+    margin-left: 53px;
+    margin-top: -21px;
+    border-radius: 80%;
+}
+.contenedor-color2{
+    background: white;
+    width: 28px;
+    height: 28px;
+    margin-left: 44%;
+    margin-top: -22px;
+    border-radius: 80%;
+    position: relative;
+    z-index: 10;
+}
+.pencil-position{
+    position: relative;
+    z-index: 20;
+}
+@media screen and (max-width:480px){
+    .posicion2{
+        margin-left: 70%;
+    }
+    .contenedor-color2{
+        margin-left: 46%;
+    }
+}

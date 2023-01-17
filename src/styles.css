@@ -1,1 +1,139 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+}
+.logo{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content:space-between;
+    background-color: rgba(6, 159, 149, 0.6);
+    backdrop-filter: blur(40);
+    position: fixed;
+    z-index: 80;
+    box-shadow: 0 0 25px #222;
+    backdrop-filter: blur(10px);
+}
+.logo img{
+    width: 200px;
+    height: 70px;
+    display: flex;
+    margin-left:20px;
+    margin-top: 5px;
+}
+.logo span{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+.btn-left{
+    display: flex;
+    padding-right: 30px;
+}
+.button1{
+    width: 80px;
+    height: 40px;
+    background-color: rgb(255, 166, 0);
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top:15px;
+    margin-right: 10px;
+    justify-content: center;
+}
+.boton1:hover{
+    box-shadow: 0 0 6px 6px rgba(0, 255, 255,0.6);
+    background-color: black;
+    color: white;
+}
+.button2{
+    width: 80px;
+    height: 40px;
+    background-color: gray;
+    border-radius: 20px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+.boton2:hover{
+    box-shadow: 0 0 6px 6px rgba(0, 255, 255,0.6);
+    background-color: black;
+    color: white;
+}
+.btn-left input{
+    width: 80px;
+    height: 30px;
+    align-self: center;
+    margin-left: 10px;
+}
+#profile-background{
+    width: 100%;
+    height: 300px;
+}
+#profile-background img{
+    width: 100%;
+    height: 100%;
+}
+#first-cart{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#info-img{
+    width: 140px;
+    height: 140px;
+    position: relative;
+    margin-top: -90px;
+    z-index: 10;
+}
+#info-img img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    display: block;
+    position: relative;
+    z-index: 10;
+}
+#info-data{
+    margin-top: 10px;
+}
+.experiencia h1{
+    text-align: center;
+}
+.container{
+    margin-top: 260px;
+    height: 400px;
+    width: 400px;
+    /* background-color: #ffffff; */
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 20%;
+    border-radius: 8px;
+    /* box-shadow: 20px 20px 40px rgba(60, 60, 150, 0.25);
+    display: grid; */
+    place-items: center;
+}
+.circular-progress{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+.value-container{
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    color: #231c3d;
+}

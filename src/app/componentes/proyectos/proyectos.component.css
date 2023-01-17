@@ -1,0 +1,59 @@
+.proyectos{
+    margin: 30px 16px 10px 16px;
+    border: 2px solid grey;
+    padding: 20px;
+    border-radius: 30px;
+}
+.proyectos h1{
+    display: inline;
+    margin-left: 40%;
+}
+.proyectos p{
+    width: 80%;
+}
+#mas{
+    margin-top: -60px;
+    margin-left: 94%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+#pencil{
+    display: block;
+    position: absolute;
+    margin-left: 85%;
+    margin-top: -60px; 
+    cursor: pointer;
+}
+#borrar{
+    display: block;
+    position: absolute;
+    margin-left: 88%;
+    margin-top: -60px; 
+    cursor: pointer;
+}
+li{
+    list-style: none;
+}
+@media screen and (max-width:480px){
+    .proyectos h1{
+        margin-left: 30%;
+    }
+    #mas{
+        margin-left: 85%;
+    }
+    #pencil{
+        margin-left: 70%;
+        margin-top: -100px;
+    }
+    #borrar{
+        margin-left: 78%;
+        margin-top: -100px;
+    }
+    ol,ul{
+        padding-left: 1rem;
+    }
+    .proyectos{
+        padding: 0;
+    }
+}

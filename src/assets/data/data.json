@@ -1,0 +1,75 @@
+{
+    "id" : "1",
+    "nombre" : "Brian Sanchez",
+    "puesto" : "Full Stack Developer Jr",
+    "nacionalidad" : "Buenos Aires(Argentina)",
+    "imagenFondo" : "/assets/imagenes/fondo.jpg",
+    "imagenPerfil" : "/assets/imagenes/imagenperfil.jpg",
+    "image" : "",
+    "position" : "Informatico",
+    "company" :{
+        "name" : "Estudiante de Argentina Programa",
+        "img" : "",
+        "url" : "#"
+    },
+    "estudio":[ {
+        "titulo" : "Curso Argentina Programa",
+        "inicio" : "Febrero 2022",
+        "fin" : "Diciembre 2022",
+        "descripcion" : "Se trata de un programa nacional y federal que tiene como objetivo capacitar a personas en lenguajes y conocimientos sobre programación.",
+        "img" : "/assets/imagenes/arg-programa.png"
+    },{
+        "titulo" : "Curso de Experiencia de usuario(UX) en Coursera",
+        "inicio" : "Julio 2022",
+        "fin" : "Octubre 2022",
+        "descripcion" : "Certificado de curso del Google, realizado en Coursera aprendiendo todos los conocimientos en diseño UX.",
+        "img" : "/assets/imagenes/logo-coursera.png"
+    },{
+        "titulo" : "Curso en Diseño Grafico",
+        "inicio" : "Julio 2020",
+        "fin" : "Diciembre 2020",
+        "descripcion" : "Certificado de curso de Diseño Grafico, realizado en el CFP 406 cede San Martin, aprendiendo los programas de Photoshop e Ilustrator de adobe.",
+        "img" : "/assets/imagenes/logo-cfp406.jpg"
+    },{
+        "titulo" : "Tecnico En Electronica",
+        "inicio" : "Marzo 2009",
+        "fin" : "Diciembre 2016",
+        "descripcion" : "Carrera de Tecnico Electronico, en la Escuela Secundario N°1 de San Martin",
+        "img" : "/assets/imagenes/EESTN1.jpg"
+    },{
+        "titulo" : "Tec",
+        "inicio" : "Marzo 2009",
+        "fin" : "Diciembre 2016",
+        "descripcion" : "Carrera de Tecnico Electronico, en la Escuela Secundario N°1 de San Martin",
+        "img" : "/assets/imagenes/EESTN1.jpg"
+    }],
+    "skill" : [{
+        "actitud" : "Resolucion de problemas",
+        "porcentaje" : "80%"
+    },{
+        "actitud" : "Resposabilidad",
+        "porcentaje" : "90%"
+    },{
+        "actitud" : "Puntual",
+        "porcentaje" : "80%"
+    },{
+        "actitud" : "Organizado",
+        "porcentaje" : "90%"
+    },{
+        "actitud" : "Trabajo en Equipo",
+        "porcentaje" : "70%"
+    }],
+    "proyectos" : [{
+        "proyecto" : "Proyecto de porfolio argentina programa",
+        "descripcion" : "Desarrolle una web porfolio para front-end basado en angular con un diseño proporcionado por el curso"
+    },{
+        "proyecto" : "Primer proyecto UX para coursera",
+        "descripcion" : "Desarrolle una app de hoja de tiempo para maestros de aikido, realización de entrevistas, esquema de papel y digitales, creación de prototipos de baja y alta fidelidad, realización de estudio de facilidad de uso,accesibilidad e iteración de diseño."
+    },{
+        "proyecto" : "Segundo proyecto UX para coursera",
+        "descripcion" : "Desarrolle una web de tutoriales de coficación, realización de entrevistas, esquema de papel y digitales, creación de prototipos de baja y alta fidelidad, realización de estudio de facilidad de uso,accesibilidad e iteración de diseño."
+    },{
+        "proyecto" : "Tercer proyecto UX para coursera",
+        "descripcion" : "Desarrolle una app y web de asesoramiento nutricional, realización de entrevistas, esquema de papel y digitales, creación de prototipos de baja y alta fidelidad, realización de estudio de facilidad de uso,accesibilidad e iteración de diseño."
+    }]
+}

@@ -1,0 +1,74 @@
+.educacion{
+    margin: 20px 16px 10px 16px;
+    border: 2px solid grey;
+    padding: 20px;
+    border-radius: 30px;
+}
+.educacion1{
+    display: inline;
+}
+.educacion h1{
+    display: inline;
+    margin-left: 40%;
+}
+.educacion1 img{
+    height: 70px;
+    width: 120px;
+}
+.educacion p{
+    margin-left: 140px;
+    width: 70%;
+}
+.ImgYText{
+    display: inline;
+    margin-right: 20px;
+}
+.lista{
+    list-style: none;
+}
+#pencil{
+    display: block;
+    position: absolute;
+    margin-left: 85%;
+    margin-top: -60px; 
+    cursor: pointer;
+}
+#borrar{
+    display: block;
+    position: absolute;
+    margin-left: 88%;
+    margin-top: -60px; 
+    cursor: pointer;
+}
+#mas{
+    margin-top: -60px;
+    margin-left: 94%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+@media screen and (max-width:480px){
+    .educacion h1{
+        margin-left: 25%;
+    }
+    #mas{
+        margin-left: 90%;
+    }
+    .educacion p{
+        margin-left: 0;
+    }
+    #pencil{
+        margin-left: 68%;
+        margin-top: -90px;
+    }
+    #borrar{
+        margin-left: 75%;
+        margin-top: -90px;
+    }
+    ol, ul{
+        padding-left: 1rem;
+    }
+    .educacion{
+        padding-left: 10px;
+    }
+}

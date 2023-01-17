@@ -1,0 +1,56 @@
+.HardSoftSkill h1{
+    text-align: center;
+}
+.HardSoftSkill{
+    margin: 30px 16px 10px 16px;
+    border: 2px solid grey;
+    padding: 20px;
+    border-radius: 30px;
+}
+li{
+    list-style: none;
+    margin-top: 20px;
+}
+p{
+    text-align: center;
+}
+#pencil{
+    position: absolute;
+    margin-left: 85%;
+    cursor: pointer;
+}
+#borrar{
+    position: absolute;
+    margin-left: 88%;
+    cursor: pointer;
+}
+.progress{
+    width: 90%;
+}
+#mas{
+    margin-top: -60px;
+    margin-left: 94%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+@media screen and (max-width:480px){
+    #mas{
+        margin-top: -70px;
+        margin-left: 85%;
+    }
+    #pencil{
+        margin-left: 70%;
+        margin-top: -30px;
+    }
+    #borrar{
+        margin-left: 78%;
+        margin-top: -30px;
+    }
+    ol,ul{
+        padding-left: 1rem;
+    }
+    .HardSoftSkill{
+        padding: 0;
+    }
+}

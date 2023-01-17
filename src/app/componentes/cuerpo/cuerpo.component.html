@@ -1,0 +1,127 @@
+   <!-- Modal -->
+   <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Link de la imagen</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup] = "itemF" (ngSubmit)="onEditFondo(itemF.value)" class="form" enctype="multipart/form-data">
+          <p>Link de la imagen</p>
+          <div class="input-group controls">
+            <input formControlName = "link" name="link" type="text" class="form-control" placeholder="Escriba el nuevo link" aria-label="Recipient's username" aria-describedby="basic-addon2"><br>
+          </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button (click)="onEditFondo(itemF.value)" type="button" class="btn btn-primary">crear</button>
+        </div>
+      </div>
+    </div>
+  </div>
+     <!-- Modal 2-->
+     <div class="modal fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Link de la imagen de perfil</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup] = "itemF" (ngSubmit)="onEditFondo(itemF.value)" class="form" enctype="multipart/form-data">
+              <p>Link de la imagen de perfil</p>
+              <div class="input-group controls">
+                <input formControlName = "link" name="link" type="text" class="form-control" placeholder="Escriba el nuevo link de perfil" aria-label="Recipient's username" aria-describedby="basic-addon2"><br>
+              </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button (click)="onEditPerfil(itemF.value)" type="button" class="btn btn-primary">crear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="card mat-card" id="first-cart">
+    <div *ngFor="let fondo of fondo" id="profile-background">
+        <img [src]="fondo.link" alt="fondo">
+        <div class="posicion2">
+            <svg data-bs-toggle="modal" data-bs-target="#staticBackdrop4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil pencil-position" id="pencil" viewBox="0 0 16 16">
+                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+            </svg>
+            <div class="contenedor-color2"></div>
+    </div>
+    </div>
+    
+    <div id="info" style="padding: 16px;">
+        <div id="info-img">
+            <div *ngFor="let perfil of perfil">
+                <img class="profile-image" [src]="perfil.link">
+            </div>
+            <div class="posicion">
+                    <svg data-bs-toggle="modal" data-bs-target="#staticBackdrop5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" id="pencil" viewBox="0 0 16 16">
+                        <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                    </svg>
+                    <div class="contenedor-color"></div>
+            </div>
+        </div>
+        <div id="info-data">
+            <div *ngFor="let persona of personas">
+                <div *ngIf="persona.isEdit">
+                    <input type="text" [(ngModel)]="persona.nombre" class="form-control">
+                    <input type="text" [(ngModel)]="persona.apellido" class="form-control">
+                </div>
+                <div *ngIf="!persona.isEdit">
+                    <div class="nombre">
+                        <h2>{{persona?.nombre}} {{persona?.apellido}}</h2>
+                        <svg (click)="onEditPer(persona)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" id="pencil" viewBox="0 0 16 16">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                        </svg>
+                    </div>
+                </div>
+                    
+                
+                <div *ngIf="persona.isEdit">
+                    <input type="text" [(ngModel)]="persona.puesto" class="form-control">
+                </div>
+                <div *ngIf="!persona.isEdit">
+                    <div class="puesto">
+                        <p>{{persona?.puesto}}</p>
+                    </div>
+                </div>
+                <div *ngIf="persona.isEdit">
+                    <input type="text" [(ngModel)]="persona.nacionalidad" class="form-control">
+                </div>
+                <div *ngIf="!persona.isEdit">
+                    <div class="nacionalidad">
+                        <p>{{persona?.nacionalidad}} <a href="#">Información de contacto</a></p>
+                    </div>
+                </div>
+                <div *ngIf="persona.isEdit">
+                    <button class="btn btn-sm btn-success" (click)="onEnviarPer(persona)">Aceptar</button>
+                    <button class="btn btn-sm btn-success" (click)="persona.isEdit = false">Cancelar</button>
+                </div>  
+            </div>
+        </div>
+        <div id="data" *ngFor="let sobre of sobreMi">
+            <div class="SobreMi">
+                <h3>Sobre Mi:</h3>
+                <svg (click)="onEdit(sobre)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" id="pencil" viewBox="0 0 16 16">
+                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                </svg>
+            </div>
+            <div *ngIf="sobre.isEdit">
+                <input type="text" [(ngModel)]="sobre.contenido" class="form-control">
+            </div>
+            <div *ngIf="!sobre.isEdit">
+                <span id="texto">{{sobre?.contenido}}</span>
+            </div> 
+            <div *ngIf="sobre.isEdit">
+                <button class="btn btn-sm btn-success" (click)="onEnviar(sobre)">Aceptar</button>
+                <button class="btn btn-sm btn-success" (click)="sobre.isEdit = false">Cancelar</button>
+            </div>
+        </div>
+    </div>    
+</div>

@@ -1,0 +1,48 @@
+.imagen-fondo img{
+width: 100vw;
+height: 100vh;
+top: 0;
+position: absolute;
+display: flex;
+z-index: -1;
+}
+label{
+    font-weight: 600;
+}
+input{
+    margin-bottom: 20px;
+}
+#ordenar{
+    background: rgba(0, 0, 0, 0.5);
+    color: aqua;
+    width: 5rem; 
+    height: 5rem;
+}
+.noVer{
+    display: none;
+    visibility: hidden;
+}
+.ver{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 200px;
+}
+h3{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+@media screen and (max-width:480px){
+    h3{
+        font-size: 15px;
+    }
+    .ver{
+       padding: 50px;
+    }
+}

@@ -1,0 +1,47 @@
+.btn-personal{
+    background-color: rgb(156, 156, 156);
+    height: 60px;
+    width: 100px;
+    color: white;
+    padding-top: 12px;
+    margin-right:10px ;
+}
+.btn-personal:hover{
+    background-color: rgb(67, 67, 67);
+    color: wheat;
+    box-shadow: 0px 0px 10px 0px aqua;
+}
+.btn-personal2{
+    background-color: rgb(67, 67, 67);
+    height: 60px;
+    width: 100px;
+    color: white;
+    padding-top: 12px;
+    margin-right:10px ;
+}
+.btn-personal2:hover{
+    background-color: rgb(169, 0, 0);
+    color: white;
+    box-shadow: 0px 0px 10px 0px aqua;
+}
+@media screen and (max-width:480px){
+    .logo img{
+        width: 100px;
+        height: 70px;
+        margin-left: 10px;
+    }
+    .logo span{
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    .btn-personal{
+        height: 60px;
+        width: 60px;
+        font-size: 12px;
+    }
+    .btn-personal2{
+        height: 60px;
+        width: 60px;
+        font-size: 12px;
+    }
+}
