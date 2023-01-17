@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { ServicioProyectosService } from 'src/app/servicios/servicio-proyectos.service';
 import { FormGroup, FormControl} from '@angular/forms';
+import {timer} from 'rxjs';
 
 @Component({
   selector: 'app-proyectos',
@@ -54,10 +55,16 @@ export class ProyectosComponent implements OnInit {
       "descripcion": itemP.descripcion}).subscribe((data)=>{
       this.crearProy=data;
     });
-    window.location.reload(); 
+    const contador = timer(1000);
+    contador.subscribe((n)=>{
+      window.location.reload(); 
+    });
   }
   onBorrar(itemId:any){
     this.serviceProy.postBorrarProy(itemId).subscribe();
-    window.location.reload(); 
+    const contador = timer(1000);
+    contador.subscribe((n)=>{
+      window.location.reload(); 
+    });
   }
 }
