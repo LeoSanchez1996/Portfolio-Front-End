@@ -8,8 +8,8 @@ import { SobreMi } from '../modelo/sobremi';
 export class ServicioSobremiService {
 
   constructor(private http:HttpClient) { }
-  Url='https://backend-contenido.onrender.com/users/sobreMi';
-  Url2='https://backend-contenido.onrender.com/users/sobreMi/1'
+  Url='https://miprimeraapi.onrender.com/api/auth/users/sobreMi';
+  Url2='https://miprimeraapi.onrender.com/api/auth/users/sobreMi/1'
   
   getSobreMi(){
     return this.http.get<SobreMi[]>(this.Url)
