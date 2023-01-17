@@ -8,18 +8,18 @@ import { Skill } from '../modelo/skill';
 export class ServicioSkillService {
 
   constructor(private http:HttpClient) {}
-    Url='https://backend-contenido.onrender.com/users/skill';
+    Url='https://miprimeraapi.onrender.com/api/auth/users/skill';
   
   getSkill(){
     return this.http.get<Skill[]>(this.Url)
   }
   postActualizarSkill(datos:any, datosID:any){
-    return this.http.put<any>('https://backend-contenido.onrender.com/users/skill/'+datosID, datos);
+    return this.http.put<any>('https://miprimeraapi.onrender.com/api/auth/users/skill/'+datosID, datos);
   }
   postCrearSkill(datos:any){
-    return this.http.post<any>('https://backend-contenido.onrender.com/users/skill', datos);
+    return this.http.post<any>('https://miprimeraapi.onrender.com/api/auth/users/skill', datos);
   }
   postBorrarSkill(datosID:any){
-    return this.http.delete<any>('https://backend-contenido.onrender.com/users/skill/'+datosID);
+    return this.http.delete<any>('https://miprimeraapi.onrender.com/api/auth/users/skill/'+datosID);
   }
 }
