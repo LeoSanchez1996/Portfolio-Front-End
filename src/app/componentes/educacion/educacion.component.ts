@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { ServicioEstudioService } from 'src/app/servicios/servicio-estudio.service';
 import { FormGroup, FormControl} from '@angular/forms';
+import {timer} from 'rxjs';
 
 @Component({
   selector: 'app-educacion',
@@ -61,10 +62,16 @@ export class EducacionComponent implements OnInit {
       "img":itemE.img}).subscribe((data)=>{
       this.crearEstudio=data;
     });
-    window.location.reload(); 
+    const contador = timer(1000);
+    contador.subscribe((n)=>{
+      window.location.reload(); 
+    }); 
   }
   onBorrar(itemId:any){
     this.serviceEst.postBorrarEst(itemId).subscribe();
-    window.location.reload(); 
+    const contador = timer(1000);
+    contador.subscribe((n)=>{
+      window.location.reload(); 
+    });
   }
 }
