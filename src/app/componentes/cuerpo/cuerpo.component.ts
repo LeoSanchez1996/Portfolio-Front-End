@@ -3,6 +3,7 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { ServicioPorfService } from 'src/app/servicios/servicio-porf.service';
 import { ServicioSobremiService } from 'src/app/servicios/servicio-sobremi.service';
 import { FormGroup, FormControl} from '@angular/forms';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-cuerpo',
@@ -91,12 +92,18 @@ export class CuerpoComponent implements OnInit {
     this.servicePor.postActualizarFondo({"link" : itemF.link}).subscribe((data)=>{
       this.EditarFondo=data;
     });
-    window.location.reload(); 
+    const contador = timer(1000);
+    contador.subscribe((n)=>{
+      window.location.reload(); 
+    });
   }
   onEditPerfil(itemF:any){
     this.servicePor.postActualizarPerfil({"link" : itemF.link}).subscribe((data)=>{
       this.EditarPerfil=data;
     });
-    window.location.reload(); 
+    const contador = timer(1000);
+    contador.subscribe((n)=>{
+      window.location.reload(); 
+    });
   }
 }
