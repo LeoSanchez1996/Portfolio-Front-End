@@ -9,24 +9,24 @@ export class ServicioPorfService {
 
   
   constructor(private http:HttpClient) { }
-  Url='https://backend-contenido.onrender.com/users/';
+  Url='https://miprimeraapi.onrender.com/api/auth/users/persona/';
   
   getPersonas(){
     return this.http.get<Persona[]>(this.Url)
   }
   postActualizarPers(datos:any, datosID:any){
-    return this.http.put<any>('https://backend-contenido.onrender.com/users/'+datosID, datos);
+    return this.http.put<any>('https://miprimeraapi.onrender.com/api/auth/users/persona/'+datosID, datos);
   }
   getFondo(){
-    return this.http.get<any>('https://backend-contenido.onrender.com/users/fondo')
+    return this.http.get<any>('https://miprimeraapi.onrender.com/api/auth/users/fondo')
   }
   postActualizarFondo(datos:any){
-    return this.http.put<any>('https://backend-contenido.onrender.com/users/fondo/1', datos);
+    return this.http.put<any>('https://miprimeraapi.onrender.com/api/auth/users/fondo/1', datos);
   }
   getPerfil(){
-    return this.http.get<any>('https://backend-contenido.onrender.com/users/perfil')
+    return this.http.get<any>('https://miprimeraapi.onrender.com/api/auth/users/perfil')
   }
   postActualizarPerfil(datos:any){
-    return this.http.put<any>('https://backend-contenido.onrender.com/users/perfil/1', datos);
+    return this.http.put<any>('https://miprimeraapi.onrender.com/api/auth/users/perfil/1', datos);
   }
 }
