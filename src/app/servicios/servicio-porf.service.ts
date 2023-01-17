@@ -9,7 +9,7 @@ export class ServicioPorfService {
 
   
   constructor(private http:HttpClient) { }
-  Url='https://miprimeraapi.onrender.com/api/auth/users/persona/';
+  Url='https://miprimeraapi.onrender.com/api/auth/users/persona';
   
   getPersonas(){
     return this.http.get<Persona[]>(this.Url)
