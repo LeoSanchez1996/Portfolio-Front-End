@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { ServicioSkillService } from 'src/app/servicios/servicio-skill.service';
 import { FormGroup, FormControl} from '@angular/forms';
+import {timer} from 'rxjs';
 
 @Component({
   selector: 'app-skill',
@@ -54,10 +55,16 @@ export class SkillComponent implements OnInit {
       "porcentaje": itemS.porcentaje+"%"}).subscribe((data)=>{
       this.crearSkill=data;
     });
-    window.location.reload(); 
+    const contador = timer(1000);
+    contador.subscribe((n)=>{
+      window.location.reload(); 
+    });
   }
   onBorrar(itemId:any){
     this.serviceSkill.postBorrarSkill(itemId).subscribe();
-    window.location.reload(); 
+    const contador = timer(1000);
+    contador.subscribe((n)=>{
+      window.location.reload(); 
+    }); 
   }
 }
