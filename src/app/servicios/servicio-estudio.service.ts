@@ -8,18 +8,18 @@ import { Estudio } from '../modelo/estudio';
 export class ServicioEstudioService {
 
   constructor(private http:HttpClient) {}
-    Url='https://miprimeraapi.onrender.com/api/auth//users/estudio';
+    Url='https://miprimeraapi.onrender.com/api/auth/users/estudio';
   
   getEstudio(){
     return this.http.get<Estudio[]>(this.Url)
   }
   postActualizarEst(datos:any, datosID:any){
-    return this.http.put<any>('https://miprimeraapi.onrender.com/api/auth//users/estudio/'+datosID, datos);
+    return this.http.put<any>('https://miprimeraapi.onrender.com/api/auth/users/estudio/'+datosID, datos);
   }
   postCrearEst(datos:any){
-    return this.http.post<any>('https://miprimeraapi.onrender.com/api/auth//users/estudio', datos);
+    return this.http.post<any>('https://miprimeraapi.onrender.com/api/auth/users/estudio', datos);
   }
   postBorrarEst(datosID:any){
-    return this.http.delete<any>('https://miprimeraapi.onrender.com/api/auth//users/estudio/'+datosID);
+    return this.http.delete<any>('https://miprimeraapi.onrender.com/api/auth/users/estudio/'+datosID);
   }
 }
